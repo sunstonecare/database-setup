@@ -10,7 +10,7 @@
 -- $$ LANGUAGE sql
 -- IMMUTABLE;
 
--- For demo purposes this always retunrs 1
+-- For demo purposes this always returns 1
 CREATE OR REPLACE FUNCTION get_person_id() RETURNS integer AS
 $$
   SELECT 1;
