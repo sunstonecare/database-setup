@@ -1,0 +1,1 @@
+create index test on test_table (id) include (first_name);

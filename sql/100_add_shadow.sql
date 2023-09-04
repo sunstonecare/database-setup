@@ -1,0 +1,1 @@
+SELECT add_shadow_to_all_tables();

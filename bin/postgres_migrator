@@ -1,0 +1,5 @@
+#! /bin/bash
+CURRENT_PATH=$(dirname "$(realpath "$0")")
+source "$CURRENT_PATH/../.env"
+DSN="${PG_URL:-$DATABASE_URL}"
+docker run --rm --network host --user "$(id -u)":"$(id -g)" -e PG_URL="$DSN" -v "$CURRENT_PATH/../":/working eu.gcr.io/sunstone-dev-1/postgres_migrator --schema-directory "sql" "$@"
